@@ -153,7 +153,7 @@ class Application(Gtk.Application):
         self.dialog.set_authors(["Santiago Burgos","epsilontheta"])
         self.dialog.set_logo(GdkPixbuf.Pixbuf.new_from_file_at_size(Icons.NO_UPDATES, 64, 64))
         self.dialog.connect('response', lambda dialog, data: dialog.destroy())
-        self.dialog.show_all()
+        self.dialog.show()
         
     def TimerApplication(self, data = None):
         GLib.timeout_add_seconds(UPDATE_PERIOD, self.CheckUpdates)
